@@ -5,8 +5,8 @@ import Episode from './../Episode';
 
 const mockEpisode = {
     id:1, 
-    image: 'http://static.tvmaze.com/uploads/images/original_untouched/200/501942.jpg', 
     name: '', 
+    image: 'https://i.ibb.co/2FsfXqM/stranger-things.png', 
     season: 1, 
     number: 1, 
     summary: 'Summary Test', 
@@ -15,8 +15,8 @@ const mockEpisode = {
 
 const mockEpisodeNoImage = {
     id:1, 
-    image: null, 
-    name: '', 
+    name: '',
+    image: null,  
     season: 1, 
     number: 1, 
     summary: 'Summary Test', 
@@ -38,6 +38,5 @@ test("renders the summary test passed as prop", ()=>{
 test("renders default image when image is not defined", ()=>{
     render(<Episode episode={mockEpisodeNoImage} />);
     const imgAltText = screen.queryByAltText('./stranger_things.png');
-    console.log(imgAltText);
     //expect(imgAltText).toBeInTheDocument();
 });
