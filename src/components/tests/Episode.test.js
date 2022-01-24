@@ -37,6 +37,6 @@ test("renders the summary test passed as prop", ()=>{
 
 test("renders default image when image is not defined", ()=>{
     render(<Episode episode={mockEpisodeNoImage} />);
-    const imgAltText = screen.queryByAltText('./stranger_things.png');
-    //expect(imgAltText).toBeInTheDocument();
+    const imgAltText = screen.queryByAltText('https://i.ibb.co/2FsfXqM/stranger-things.png');
+    expect(imgAltText).toBeInTheDocument();
 });
